@@ -41,3 +41,5 @@ Run the app on a physical device or emulator
 2. Integration with HR management systems to track the progress of reported issues
 3. Integration with law enforcement agencies to allow employees to report incidents directly to them
 4. Option to provide feedback on how the organization handled the issue
+
+## [Implementation Details](/SWDoc/implementation.md)
