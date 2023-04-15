@@ -42,4 +42,4 @@ Run the app on a physical device or emulator
 3. Integration with law enforcement agencies to allow employees to report incidents directly to them
 4. Option to provide feedback on how the organization handled the issue
 
-## [Implementation Details](/SWDoc/implementation.md)
+## [Implementation Details](./implementation.md)
