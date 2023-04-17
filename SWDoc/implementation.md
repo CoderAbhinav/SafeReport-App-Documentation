@@ -30,6 +30,9 @@ This project follows the GetX architecture pattern which consists of Models, Vie
 
 ```
 lib/
+  |- assets/
+      |- landing_page_illustrations
+      |- logo
   |- controllers/
       |- auth_controller.dart
       |- search_view_controller.dart
@@ -40,13 +43,15 @@ lib/
       |- report.dart
       |- organisation.dart
   |- services/
-      |- firebase_auth_service.dart
+      |- auth_services.dart
       |- employee_services.dart
       |- organiation_service.dart
   |- views/
       |- components/
             |- buttons.dart
             |- headers.dart
+            |- organisation_tile.dart
+            |- report_tile.dart
       |- authentication_views/
             |- input_mobile_no.dart
             |- input_otp.dart
@@ -55,13 +60,21 @@ lib/
       |- common_views/
             |- search.dart
       |- employee_views/
+            |- subpages/
+                |- report_detailed_view.dart
+                |- resolution_confirmation_page.dart
             |- feed.dart
             |- profile.dart
             |- reports.dart
+            |- employee_home_view.dart
       |- organisation_views/
+            |- subpages/
+                |- report_detailed_view.dart
+                |- add_employee.dart
             |- feed.dart
             |- reports.dart
             |- profile.dart
+            |- organisation_home_view.dart
       |- landing_view.dart
   |- utils/
       |- size_util.dart
@@ -153,7 +166,7 @@ class AuthenticationController extends GetxController {
 
 ```
 class EmployeeViewController extends GetxController {
-    Rx<List<Report>> reportsFiled;
+    Rx<Map<String, Report>> reportsFiled;
 
     Future handleFileAReport(
         String title, 
@@ -174,7 +187,7 @@ class EmployeeViewController extends GetxController {
 
 ```
 class OrganisationViewController extends GetxController {
-    Rx<List<Report>> reportsFiled;
+    Rx<Map<String, Report>> reportsFiled;
 
     Future handleReplyToMessege(
         Report report,
